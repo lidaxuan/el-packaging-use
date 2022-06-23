@@ -1,0 +1,22 @@
+/*
+  <div radius="2"></div>
+  <div radius="4"></div>
+  <div radius="16"></div>
+*/
+@for $index from 0 through 16 {
+  [radius="#{$index}"] {
+    border-radius: unit($number: $index) !important;
+  }
+  [radiustl="#{$index}"] {
+    border-top-left-radius: unit($number: $index) !important;
+  }
+  [radiustr="#{$index}"] {
+    border-top-right-radius: unit($number: $index) !important;
+  }
+  [radiusbl="#{$index}"] {
+    border-bottom-left-radius: unit($number: $index) !important;
+  }
+  [radiusbr="#{$index}"] {
+    border-bottom-right-radius: unit($number: $index) !important;
+  }
+}

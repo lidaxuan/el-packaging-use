@@ -1,0 +1,54 @@
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-max {
+  flex: 1;
+}
+.flex-item {
+  flex: 1;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-aic {
+  align-items: center;
+}
+
+.flex-aiend {
+  align-items: end;
+}
+
+.flex-ccb {
+  justify-content: space-between;
+}
+.flex-cca {
+  justify-content: space-around;
+}
+.flex-ccc {
+  justify-content: center;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-row-revers {
+  flex-direction: row-reverse;
+}
+.inherit {
+  flex: inherit;
+}
+.align {
+  align-items: center;
+}
+
+.felx-asend {
+  align-self: flex-end;
+}

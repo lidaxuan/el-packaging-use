@@ -1,0 +1,34 @@
+/*
+  ml5, ml10... ml70
+  ml6, ml8, ml10, ml12
+*/
+@each $item in (5, 200, 5), (4, 14, 2) {
+  @for $index from 0 through floor(nth($item, 2) / nth($item, 3)) {
+    $number: $index * nth($item, 3) + nth($item, 1);
+
+    @if $number <= nth($item, 2) {
+      .m#{$number} {
+        margin: unit($number: $number) unit($number: $number) !important;
+      }
+      .ml#{$number} {
+        margin-left: unit($number: $number) !important;
+      }
+
+      .mt#{$number} {
+        margin-top: unit($number: $number) !important;
+      }
+
+      .mr#{$number} {
+        margin-right: unit($number: $number) !important;
+      }
+
+      .mb#{$number} {
+        margin-bottom: unit($number: $number) !important;
+      }
+    }
+  }
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}

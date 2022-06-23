@@ -1,0 +1,11 @@
+/*
+ * @Description: 
+ * @Author: 李大玄
+ * @Date: 2021-12-13 14:49:30
+ * @FilePath: /textbot-web-view/src/assets/base/element-ui.scss
+ */
+// $--font-path: "https://statics.easyliao.com/web/vue/element-ui/2.13.1/theme-chalk/fonts";
+// $--font-path: '~element-ui/lib/theme-chalk/fonts';
+$--font-path: "https://statics.easyliao.com/web/vue/element-ui/2.13.1/theme-chalk/fonts";
+// @import 'element-ui/lib/theme-chalk/index.css'; // 默认主题
+@import "~element-ui/packages/theme-chalk/src/index";

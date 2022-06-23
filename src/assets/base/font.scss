@@ -1,0 +1,43 @@
+.font-pf {
+  font-family: "微软雅黑"
+}
+
+.font-pfb {
+  font-family: "微软雅黑"
+}
+
+.font-fz {
+  font-family: "微软雅黑"
+}
+$black: #202023;
+$grey: #e6e9ed;
+
+@for $size from 1 to 6 {
+  h#{$size} {
+    &[font] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+[color="black"] {
+  color: $black;
+}
+
+[color="grey"] {
+  color: $grey;
+}
+
+/*
+  [font="12"], [font="14"], [font="16"] ... [font="30"]
+*/
+@for $index from 12 through 50 {
+  $number: floor($index % 2);
+  // $number: $index;
+  @if $number == 0 {
+    [font="#{$index}"] {
+      font-size: unit($number: $index) !important;
+    }
+  }
+}

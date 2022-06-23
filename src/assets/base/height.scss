@@ -1,0 +1,16 @@
+
+// @for $index from 1 through 400 {
+  
+//   .w#{$index} {
+//     width: unit($number: 200 + $index);
+//   }
+// }
+
+$i: 600;
+@while $i > 0 {
+  .h#{$i} {
+    //     width: unit($number: 200 + $index);
+    height: unit($number: $i) !important;
+  }
+  $i: $i - 10;
+}

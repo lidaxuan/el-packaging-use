@@ -1,30 +1,38 @@
 /*
  * @Author: web.范庆龙
  * @Date: 2020-04-26 10:40:48
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-07 11:15:37
+ * @LastEditors: 李大玄
+ * @LastEditTime: 2022-06-24 16:19:46
  * @Description: file content
  */
-import Vue from 'vue';
-import Vuex from 'vuex';
-import menus from './modules/menus';
-import user from './modules/user';
-import getters from './getters';
+import Vue from "vue";
+import Vuex from "vuex";
+import utils from "wb@/utils";
+import getters from "./getters";
+const files = require.context("./modules", false, /\.js$/);
+import createPersistedState from "vuex-persistedstate";
+import { createStore } from 'wb@/store'
+// Vue.use(Vuex);
 
-import createPersistedState from 'vuex-persistedstate';
-Vue.use(Vuex);
+// export function createStore() {
+//   const store = new Vuex.Store({
+//     modules: utils.readFile(files),
+//     getters,
+//     plugins: [
+//       createPersistedState({
+//         key: "S",
+//         storage: window.sessionStorage, //选择 sessionStorage 进行存储
+//         paths: []
+//       }),
+//       createPersistedState({
+//         key: "xxx-web-view.L",
+//         storage: window.localStorage, //选择 localStorage 进行存储
+//         paths: ["layoutMenus", "user"]
+//       })
+//     ]
+//   });
+//   return store
+// }
 
-const store = new Vuex.Store({
-  modules: {
-    menus,
-    user
-  },
-  getters,
-  plugins: [createPersistedState({
-    key: 'textbot-web',
-    storage: window.sessionStorage //选择sessionStorage 进行存储
-    // paths:['menus','user']
-  })]
-});
-
-export default store;
+export const store = createStore();
+// export default store;

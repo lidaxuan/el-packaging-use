@@ -1,4 +1,4 @@
-import utils from "@/utils";
+import utils from "wb@/utils";
 
 export function mergeExport(vueFiles) {
   let obj = {};

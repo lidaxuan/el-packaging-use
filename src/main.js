@@ -2,20 +2,22 @@
  * @Description: 
  * @Author: 李大玄
  * @Date: 2022-06-22 09:54:44
- * @FilePath: /el-packaging-use/src/main.js
+ * @FilePath: /el-pack/src/main.js
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-22 16:20:29
+ * @LastEditTime: 2022-06-24 17:17:39
  */
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import { router } from "./router";
+import { store } from "./store";
 import service from "./service";
-import ElementUI from 'element-ui';
+
 import 'element-ui/lib/theme-chalk/index.css';
-import './assets/base/index.scss';
-import hljs from 'highlight.js' //导入代码高亮文件
-import 'highlight.js/styles/monokai-sublime.css'  //导入代码高亮样式
+import ElementUI from 'element-ui';
+// import './assets/base/index.scss';
+// import hljs from 'highlight.js' //导入代码高亮文件
+// import 'highlight.js/styles/monokai-sublime.css'  //导入代码高亮样式
+import { createApp } from 'web_beacon';
 
 Vue.config.productionTip = false;
 
@@ -24,18 +26,19 @@ Vue.use(ElementUI, { size: 'small' });
 
 //自定义一个代码高亮指令
 
-Vue.directive('highlight', function (el) {
-  let highlight = el.querySelectorAll('pre code');
-  highlight.forEach((block) => {
-    console.log(block);
-    hljs.highlightBlock(block)
-  })
-});
+// Vue.directive('highlight', function (el) {
+//   let highlight = el.querySelectorAll('pre code');
+//   highlight.forEach((block) => {
+//     hljs.highlightBlock(block)
+//   })
+// });
+const app = createApp(App, router, store);
+console.log('app', app);
 
-setTimeout(() => {
-  new Vue({
-    router,
-    store,
-    render: (h) => h(App),
-  }).$mount("#app");
-}, 0);
+// setTimeout(() => {
+//   new Vue({
+//     router: createRouter(routes),
+//     store,
+//     render: (h) => h(App),
+//   }).$mount("#app");
+// }, 0);

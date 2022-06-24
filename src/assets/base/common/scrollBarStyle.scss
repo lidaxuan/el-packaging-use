@@ -1,0 +1,35 @@
+/*
+ * @Description: 
+ * @Author: 李大玄
+ * @Date: 2022-06-22 18:17:24
+ * @FilePath: /web_beacon/src/assets/base/common/scrollBarStyle.scss
+ * @LastEditors: 李大玄
+ * @LastEditTime: 2022-06-23 09:45:29
+ */
+//sass自定义滚动条样式 $foreground-color, $background-color
+//::-webkit-scrollbar {
+//    width: 1px;
+//    height: 1px;
+//    border-radius: 3px;
+//}
+@mixin scrollBarStyle($background-color) {
+    &::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: $background-color;
+    }
+}
+@include scrollBarStyle($-color-C9CDD4);
+@mixin hoverScrollBarStyle($background-color) {
+    @include scrollBarStyle(transparent);
+    &:hover {
+        @include scrollBarStyle($background-color);
+    }
+}

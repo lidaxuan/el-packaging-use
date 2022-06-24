@@ -1,0 +1,138 @@
+{
+  "textStyle": [
+    {
+      "name": "辅助提示",
+      "size": "12",
+      "content": "主要用于提示说明类描述文案"
+    },
+    {
+      "name": "基础用字",
+      "size": "14",
+      "content": "主要用于表格标题及常规文案"
+    },
+    {
+      "name": "小标题",
+      "size": "16",
+      "content": "主要用于通知及文章标题文案"
+    },
+    {
+      "name": "辅助提示",
+      "size": "18",
+      "content": "主要用于二级栏目文案"
+    }
+  ],
+  "textApplication": [
+    {
+      "id": "1",
+      "basics": "基础色",
+      "size": "14",
+      "basicsColor": "#344563",
+      "basicsContent": "常规文案用色",
+      "assist": "辅助色",
+      "assistColor": "#7D8DBF",
+      "contentColor": "#7D8DBF",
+      "basicsContent": "提示描述文案用色"
+    },
+    {
+      "id": "2",
+      "basics": "按钮色",
+      "size": "14",
+      "basicsColor": "var(--layoutMain-6359CA)",
+      "basicsContent": "仅列表操作功能用色",
+      "assist": "按钮色",
+      "assistColor": "var(--layoutMain-6359CA)",
+      "contentColor": "#7D8DBF",
+      "basicsContent": "常规文字按钮及链接用色"
+    },
+    {
+      "id": "3",
+      "basics": "成功色",
+      "size": "14",
+      "basicsColor": "#67C33A",
+      "basicsContent": "成功提示文案用色",
+      "assist": "错误色",
+      "assistColor": "#F56C6C",
+      "contentColor": "#7D8DBF",
+      "basicsContent": "错误提示文案用色"
+    },
+    {
+      "id": "4",
+      "basics": "警告色",
+      "size": "14",
+      "basicsColor": "#E7A23D",
+      "basicsContent": "警告提示文案用色",
+      "assist": "标题色",
+      "assistColor": "#170C6B",
+      "contentColor": "#7D8DBF",
+      "basicsContent": "二级页面主标题用色"
+    }
+  ],
+  "borderStyle": [
+    {
+      "id": "1",
+      "name": "小圆角",
+      "size": "br-4",
+      "br": "border-radius: 4px",
+      "border": "border: 2px solid #D4DBF8"
+    },
+    {
+      "id": "2",
+      "name": "大圆角：表格背景",
+      "size": "br-8",
+      "br": "border-radius: 8px",
+      "border": "border: 2px solid #D4DBF8"
+    }
+  ],
+  "shadowStyle": [
+    {
+      "id": "1",
+      "name": "框架层：顶部及左侧一级导航区",
+      "content": "#EBEBEB X：0 Y：4 模糊：4",
+      "shadow": "0px 4px 4px 0px #EBEBEB"
+    },
+    {
+      "id": "2",
+      "name": "框架层：顶部右侧功能区下拉信息",
+      "content": "#000 透度：10 X：0 Y：10 模糊：10 扩展：6",
+      "shadow": "0px 10px 10px 6px rgba(0, 0, 0, 0.1)"
+    },
+    {
+      "id": "3",
+      "name": "表格背景",
+      "content": "#D1DCF5 X：0 Y：0 模糊：12",
+      "shadow": "0px 0px 12px 0px #D1DCF5"
+    },
+    {
+      "id": "4",
+      "name": "抽屉内容列表",
+      "content": "#D1DCF5 X：0 Y：0 模糊：16",
+      "shadow": "0px 0px 16px 0px #D1DCF5"
+    }
+  ],
+  "avatarStyle": [
+    {
+      "id": "1",
+      "name": "默认大头像90PX",
+      "size": "head90 w-90 h-90 lh-90",
+      "font": "60"
+    },
+    {
+      "id": "2",
+      "name": "大头像90PX",
+      "size": "head90 w-90 h-90 lh-90",
+      "font": "60"
+    },
+    {
+      "id": "3",
+      "name": "中头像48PX",
+      "size": "head48 w-48 h-48 lh-48",
+      "font": "24"
+    },
+    {
+      "id": "4",
+      "name": "中头像32PX",
+      "size": "head48 w-32 h-32 lh-32",
+      "font": "16"
+    }
+  ]
+}

@@ -2,36 +2,55 @@
  * @Description: 
  * @Author: 李大玄
  * @Date: 2022-06-22 09:54:44
- * @FilePath: /el-packaging-use/src/App.vue
+ * @FilePath: /el-pack/src/App.vue
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-22 11:38:05
+ * @LastEditTime: 2022-06-24 17:15:52
 -->
 <template>
   <div id="app">
-    <router-view v-if="isShow"/>
+    111234
+    <Application>
+      <template v-slot:content>
+        <router-view v-if="isShow" />
+      </template>
+    </Application>
   </div>
 </template>
 
 <script>
+import Application from 'web_beacon';
 export default {
   name: 'App',
-  provide(){
-    return{
-      reload:this.reload
-    }
+  provide() {
+    return {
+      reload: this.reload
+    };
   },
-  data(){
-    return{
-      isShow:true
-    }
+  components: {
+    Application
   },
-  methods:{
-    reload(){
-      this.isShow=false;
-      this.$nextTick(()=>{
-        this.isShow=true
-      })
+  data() {
+    return {
+      isShow: true
+    };
+  },
+  created() {
+    const obj = {
+      name: '1'
+    };
+  },
+  methods: {
+    reload() {
+      this.isShow = false;
+      this.$nextTick(() => {
+        this.isShow = true;
+      });
     }
   }
-}
+};
 </script>
+<style lang="scss" scoped>
+#app {
+  height: 100%;
+}
+</style>

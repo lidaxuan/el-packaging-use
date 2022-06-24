@@ -1,48 +1,45 @@
 /*
  * @Author: web.范庆龙
  * @Date: 2020-04-26 10:40:48
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-05-07 11:13:46
+ * @LastEditors: web.范庆龙
+ * @LastEditTime: 2020-04-26 10:45:43
  * @Description: file content
  */
-import * as types from '../types';
-
+import * as types from "../types";
+import setting from "./setting";
 const user = {
   state: {
     // 用户信息
     userMsg: {},
-    token: '',
-    textRobot: {} //机器人信息
+    token: null,
+    // ui系统主题设置
+    layoutSetting: setting.layoutSetting,
   },
   mutations: {
     [types.TOKEN]: (state, token) => {
       state.token = token;
     },
-    [types.USERMSG]: (state, userMsg) => {
+    [types.USERMSG]: (state, userMsg = {}) => {
       state.userMsg = userMsg;
     },
-    [types.TEXTROBOT]: (state, textRobot) => {
-      state.textRobot = textRobot;
+
+    [types.LAYOUTSETTING]: (state, layoutSetting = {}) => {
+      state.layoutSetting = layoutSetting;
     },
-    SET_LOGOUT(state) {
-      state.token = "";
-    }
   },
   actions: {
-    LogOut({ commit }) {
-      commit('SET_LOGOUT');
-    },
-    setToken({ commit }, token = '') {
+    setToken({ commit }, token = null) {
       commit(types.TOKEN, token);
     },
-
     setUserMsg({ commit }, userMsg = {}) {
       commit(types.USERMSG, userMsg);
     },
-    setTextRobot({ commit }, textRobot = {}) {
-      commit(types.TEXTROBOT, textRobot);
-    }
-  }
+
+    // 主题设置
+    setLayoutSetting({ commit }, layoutSetting = {}) {
+      commit(types.LAYOUTSETTING, layoutSetting);
+    },
+  },
 };
 
 export default user;

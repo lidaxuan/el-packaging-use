@@ -1,9 +1,0 @@
-mixin formItem(sceneName)
-  template(v-for="(item, index) in " + sceneName + ".sceneOptions")
-    //- pre(style="font-size: 12px") {{getItemRule(item)}}
-    //- span {{item.columnUiPlugin.model}}
-    el-form-item(:label="item.columnUiPlugin.label" :prop="item.columnUiPlugin.model" :rules="getItemRule(item)" :key="index")
-      component(v-if="getComponentType(item) == true" :is="`el-${item.columnUiPlugin.compName}`" v-model=sceneName + ".defaultValue[item.columnUiPlugin.model]" :style="{ ...item.columnUiPlugin }" v-bind="item.columnUiPlugin")
-      template(v-else-if="getComponentType(item) == 'select'")  
-        el-select(v-model=sceneName + ".defaultValue[item.columnUiPlugin.model]" :style="{ ...item.columnUiPlugin }" v-bind="item.columnUiPlugin")
-          el-option(v-for="(opt, opti) in item.columnUiPlugin.options" :key="opti" :label="opt[item.columnUiPlugin.optionsLabel]" :value="opt[item.columnUiPlugin.optionsValue]")

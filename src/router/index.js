@@ -2,14 +2,11 @@
  * @Description: 
  * @Author: 李大玄
  * @Date: 2022-06-22 09:54:44
- * @FilePath: /el-pack/src/router/index.js
+ * @FilePath: /el-packaging-use/src/router/index.js
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-24 18:26:03
+ * @LastEditTime: 2022-06-24 18:56:50
  */
-import Vue from "vue";
-import VueRouter from "vue-router";
-import { createRouter, } from 'web_beacon';
-
+import { createRouter } from 'web_beacon';
 
 
 export const routes = [
@@ -29,7 +26,7 @@ export const routes = [
     path: "/text",
     name: 'text',
     component: () =>
-      import( /*webpackChunkName: "componentA"*/ '../views/home/NewMenu.vue'),
+      import( /*webpackChunkName: "componentA"*/ '../views/home/test.vue'),
     // redirect: {
     //   name: 'ImplementationComponent'
     // },
@@ -51,6 +48,5 @@ export const routes = [
     // ]
   },
 ];
-
 
 export const router = createRouter(routes);

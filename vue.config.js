@@ -82,7 +82,7 @@ module.exports = {
         loaderOptions: {
             sass: {
                 prependData: `
-                @import "~@/assets/base/common/index.scss";
+                @import "~wb@/assets/base/common/index.scss";
                 `
             }
         }
@@ -110,18 +110,18 @@ module.exports = {
         // 解决ie11兼容ES6
         config.entry("main").add("babel-polyfill");
 
-        const oneOfsMap = config.module.rule("scss").oneOfs.store;
+        // const oneOfsMap = config.module.rule("scss").oneOfs.store;
 
-        oneOfsMap.forEach((item) => {
-            item
-                .use("sass-resources-loader")
-                .loader("sass-resources-loader")
-                .options({
-                    // 引入多个全局sass文件
-                    resources: ["./src/assets/base/common/index.scss"]
-                })
-                .end();
-        });
+        // oneOfsMap.forEach((item) => {
+        //     item
+        //         .use("sass-resources-loader")
+        //         .loader("sass-resources-loader")
+        //         .options({
+        //             // 引入多个全局sass文件
+        //             resources: ["./src/assets/base/common/index.scss"]
+        //         })
+        //         .end();
+        // });
         config.resolve.alias
             .set("wb@", path.join(__dirname, "node_modules/web_beacon/src"))
             .set('@', resolve('src'))

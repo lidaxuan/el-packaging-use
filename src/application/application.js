@@ -2,9 +2,9 @@
  * @Description: 
  * @Author: 李大玄
  * @Date: 2022-06-23 09:40:50
- * @FilePath: /web_beacon/src/application/application.js
+ * @FilePath: /el-packaging-use/src/application/application.js
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-24 09:42:37
+ * @LastEditTime: 2022-06-24 18:58:21
  */
 /*
  * @version: v1.2.0
@@ -31,7 +31,7 @@ import IconSvg from "../components/icon/IconSvg";
 // import 'highlight.js/styles/github.css';
 // import 'github-markdown-css';
 import service from "../service";
-import 'wb@/assets/base/common/index.scss'
+// import 'wb@/assets/base/common/index.scss'
 
 Vue.use(directives);
 Vue.use(ElWebBasic);

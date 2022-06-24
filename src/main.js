@@ -2,9 +2,9 @@
  * @Description: 
  * @Author: 李大玄
  * @Date: 2022-06-22 09:54:44
- * @FilePath: /el-pack/src/main.js
+ * @FilePath: /el-packaging-use/src/main.js
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-24 17:17:39
+ * @LastEditTime: 2022-06-24 18:48:36
  */
 import Vue from "vue";
 import App from "./App.vue";
@@ -33,7 +33,6 @@ Vue.use(ElementUI, { size: 'small' });
 //   })
 // });
 const app = createApp(App, router, store);
-console.log('app', app);
 
 // setTimeout(() => {
 //   new Vue({

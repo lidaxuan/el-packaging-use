@@ -4,18 +4,19 @@
  * @Date: 2022-06-22 09:54:44
  * @FilePath: /el-packaging-use/src/router/index.js
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-24 18:56:50
+ * @LastEditTime: 2022-06-30 19:08:50
  */
 import { createRouter } from 'web_beacon';
+// import { store } from '../store'
 
 
 export const routes = [
-  {
-    path: "/",
-    name: 'index',
-    component: () =>
-      import( /*webpackChunkName: "componentA"*/ '../views/baseStyle/index.vue'),
-  },
+  // {
+  //   path: "/",
+  //   name: 'index',
+  //   component: () =>
+  //     import( /*webpackChunkName: "componentA"*/ '../views/baseStyle/index.vue'),
+  // },
   {
     path: "/asdasd",
     name: 'asdasd',

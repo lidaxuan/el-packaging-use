@@ -2,13 +2,12 @@
  * @Description: 
  * @Author: 李大玄
  * @Date: 2022-06-22 09:54:44
- * @FilePath: /el-pack/src/App.vue
+ * @FilePath: /el-packaging-use/src/App.vue
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-24 17:15:52
+ * @LastEditTime: 2022-06-26 15:41:18
 -->
 <template>
   <div id="app">
-    111234
     <Application>
       <template v-slot:content>
         <router-view v-if="isShow" />

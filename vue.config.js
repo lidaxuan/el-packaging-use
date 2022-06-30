@@ -248,21 +248,36 @@ module.exports = {
     },
     devServer: {
         proxy: {
-            "/default": {
-                target: "http://dev-boss.easyliao.com", // 开发
-                changeOrigin: true,
-                pathRewrite: {
-                    "^/default": "" //路径重写npm
-                }
-            },
-            "/innerApis": {
-                target: "http://test21.easyliao.com",
+            "/apis": {
+                target: "http://dev-boss.easyliao.net", //  http://192.168.165.79:7115  http://dev-boss.easyliao.com  http://192.168.165.77:7171 //新运 http://192.168.169.94:57171
                 changeOrigin: true,
                 loglevel: "debug",
                 pathRewrite: {
-                    "^/innerApis": ""
+                    "^/apis": ""
                 }
-            }
+            },
+            "/boss-web": {
+                target: "http://dev-boss.easyliao.net", //  http://192.168.165.79:7115  http://dev-boss.easyliao.com  http://192.168.165.77:7171 //新运 http://192.168.169.94:57171
+                changeOrigin: true,
+                loglevel: "debug",
+                pathRewrite: {
+                    // "^/boss-web": ""
+                }
+            },
+            // "/default": {
+            //     target: "http://dev-boss.easyliao.com", // 开发
+            //     changeOrigin: true,
+            //     pathRewrite: {
+            //         "^/default": "" //路径重写npm
+            //     }
+            // },
+            "/eachbot-flow-web": {
+                target: 'https://test-prd18.easyliao.net', // 开发
+                changeOrigin: true,
+                pathRewrite: {
+                    // "^/robot": "" //路径重写npm
+                }
+            },
         }
     }
 };

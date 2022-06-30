@@ -4,7 +4,7 @@
  * @Author: 范庆龙
  * @Date: 2020-06-25 12:09:53
  * @LastEditors: 李大玄
- * @LastEditTime: 2022-06-24 14:10:57
+ * @LastEditTime: 2022-06-30 14:45:46
 -->
 <template>
   <div id="login" class="position-r" width="100%" height="100%" v-loading="loading" />
@@ -115,6 +115,7 @@ export default {
     }
   },
   mounted() {
+    console.log(1);
     this.initLayout();
   }
 };
